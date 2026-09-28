@@ -1,52 +1,56 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.0.0">
+  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.1.0">
     <description>Engenharia cadastral para regularização fundiária: construção, correção, medição e validação das camadas do projeto com geometria precisa e determinística.</description>
     <about>SIRGEO ShapeBuilder é o módulo de engenharia cadastral da suíte SIRGEO. Reúne, num único painel, as ferramentas para levar um projeto de regularização fundiária (REURB) do desenho dos lotes até a entrega certificada, com cálculos geométricos precisos, determinísticos e auditáveis.
 
-&lt;b&gt;Conversão e Reprojeção&lt;/b&gt;
-• Converter e Reprojetar Camadas: GeoPackage, Shapefile, KML e DXF no CRS de entrega, um arquivo por camada.
+&lt;b&gt;Correção de Geometrias&lt;/b&gt;
+• Inspecionar e Ajustar: varredura de geometrias inválidas, nós não coincidentes, fendas, sobreposições, lacunas e excessos; Corrigir (padrão) resolve o básico e Corrigir (extremo) resolve tudo, com desfazer.
+• Validação: certificação final do projeto (cobertura exata do Núcleo, sem sobreposições, Confrontantes fechados), com os erros marcados no mapa e resumo por totais.
 
-&lt;b&gt;Construção de Vetores&lt;/b&gt;
-• Gerar Quadra: une os lotes por vizinhança ou pelo atributo de quadra.
-• Gerar Núcleo: contorno da área ocupada por Lotes, Ruas e Área verde.
-• Gerar Confrontante: faixa de largura configurável ao redor do Núcleo.
-• Gerar Rua: gerada a partir do espaço entre os lotes.
-• Gerar Buffer: buffer de linha desenhada ou escolhida no mapa, com diferentes perfis e gera vértices em cruzamentos de camadas.
-• Gerar Todas as Geometrias: Quadra, Núcleo, Confrontante e Rua de uma vez, na ordem correta.
+&lt;b&gt;Construção de Polígonos&lt;/b&gt;
+• Logradouros: a área do Núcleo livre de lotes, ou Rua Provisória a partir do espaço entre os lotes.
+• Quadras: une os lotes por vizinhança ou pelo atributo de quadra.
+• Núcleo: contorno da área ocupada por Lotes, Ruas e Área verde, ou Núcleo Provisório.
+• Confrontantes: faixa de largura configurável ao redor do Núcleo.
+• Buffer's: buffer de linha desenhada ou escolhida no mapa, com diferentes perfis, e vértices nos cruzamentos com as camadas.
+• Todas as Geometrias: Quadra, Núcleo, Confrontante e Rua de uma vez, na ordem correta.
+• Tesoura em Logradouros e Confrontantes: divide as feições por uma linha traçada no mapa.
 
 &lt;b&gt;Rotulagem e Indexação&lt;/b&gt;
-• Nomear Polígono: nomes por clique no mapa ou direto na lista.
-• Numerar Lote e Quadra: numeração sequencial por clique, com variantes (6A, 6B) e reinício por quadra.
+• Nomear: nomes por clique no mapa ou direto na lista.
+• Numerar: numeração sequencial por clique, com variantes (6A, 6B) e reinício por quadra.
 
-&lt;b&gt;Correção de Geometrias&lt;/b&gt;
-• Inspecionar Geometrias: varredura de geometrias inválidas, nós não coincidentes, fendas, sobreposições, lacunas e excessos, com correção individual ou em lote e desfazer.
-• Validação Zero Erro: certificação final do projeto (cobertura exata do Núcleo, sem sobreposições, Confrontantes fechados), com camadas de diagnóstico e resumo por totais.
-
-&lt;b&gt;Cálculos e Métricas&lt;/b&gt;
+&lt;b&gt;Outros&lt;/b&gt;
 • Área e Perímetro: grava AREA, PERIMETRO, AREA_EXATA e PERIMETRO_EXATO em lote e soma as feições clicadas no mapa; medição planimétrica ou elipsoidal conforme o CRS.
-
-&lt;b&gt;Organização e Aparência&lt;/b&gt;
-• Aplicar Simbologia: estilos padrão por tipo de camada e ordenação do painel de camadas.
+• Adotar Simbologia: estilos padrão por tipo de camada e ordenação do painel de camadas.
+• Converter: GeoPackage, Shapefile, KML e DXF no CRS de entrega, um arquivo por camada e formato.
 
 &lt;b&gt;Padrões&lt;/b&gt;
 • Camadas reconhecidas pelo nome (Lotes, Ruas, Núcleo, Área verde, Confrontantes…), sem exigir acento, caixa ou plural.
-• Todas as ferramentas exigem CRS projetado e idêntico entre as camadas; nomes de arquivo com acentos e espaços preservados.
+• As ferramentas de geometria exigem CRS projetado e idêntico entre as camadas; nomes de arquivo com acentos e espaços preservados.
 • Áreas nominais arredondadas por feição e somadas; áreas exatas em precisão total para as validações.
 • Guia de uso completo no botão de ajuda (?) do painel.
 
 &lt;b&gt;Licença&lt;/b&gt;
 • Licença por máquina, validada on-line. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <qgis_minimum_version>3.40</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
     <author_name>SIRGEO</author_name>
     <file_name>sirgeo_shapebuilder.zip</file_name>
-    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.0.0/sirgeo_shapebuilder-1.0.0.zip</download_url>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.1.0/sirgeo_shapebuilder-1.1.0.zip</download_url>
     <tags>cadastro,regularizacao fundiaria,reurb,lotes,quadras,topologia,geometria,validacao,sirgas</tags>
-    <changelog>1.0.0 - Lançamento inicial.</changelog>
+    <changelog>1.1.0 - Tesoura em Logradouros e Confrontantes, Inspecionar com Corrigir padrão e extremo, guia atualizado e proteção de licença reforçada.
+• Tesoura: divide Ruas e Confrontantes em feições separadas por uma linha traçada no mapa.
+• Inspecionar e Ajustar: modos Corrigir (padrão) e Corrigir (extremo); resíduos da grade de cálculo não são mais apontados; anel interior de Ruas e Confrontantes não é erro.
+• Validação: mesmo critério de resíduo do Inspecionar; dois cliques no erro aproximam o mapa.
+• Geração: vértices de Rua, Quadra, Núcleo e Confrontante coincidem com os dos lotes; rua provisória vai de canto a canto dos lotes.
+• Nomear, Numerar, Área e Perímetro e Adotar Simbologia: ajustes de painel; troca de camada pergunta sobre edições pendentes; campos de Shapefile com nome curto.
+• Licença verificada dentro das próprias ferramentas de geometria.
+1.0.0 - Lançamento inicial.</changelog>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
-    <update_date>2026-09-25</update_date>
+    <update_date>2026-09-28</update_date>
   </pyqgis_plugin>
 </plugins>
