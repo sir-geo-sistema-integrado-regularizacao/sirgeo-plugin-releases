@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.1.1">
+  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.2.0">
     <description>Engenharia cadastral para regularização fundiária: construção, correção, medição e validação das camadas do projeto com geometria precisa e determinística.</description>
     <about>SIRGEO ShapeBuilder é o módulo de engenharia cadastral da suíte SIRGEO. Reúne, num único painel, as ferramentas para levar um projeto de regularização fundiária (REURB) do desenho dos lotes até a entrega certificada, com cálculos geométricos precisos, determinísticos e auditáveis.
 
@@ -34,14 +34,32 @@
 
 &lt;b&gt;Licença&lt;/b&gt;
 • Licença por máquina, validada on-line. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <qgis_minimum_version>3.40</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
     <author_name>SIRGEO</author_name>
     <file_name>sirgeo_shapebuilder.zip</file_name>
-    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.1.1/sirgeo_shapebuilder-1.1.1.zip</download_url>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.2.0/sirgeo_shapebuilder-1.2.0.zip</download_url>
     <tags>cadastro,regularizacao fundiaria,reurb,lotes,quadras,topologia,geometria,validacao,sirgas</tags>
-    <changelog>1.1.1 - Inspecionar fecha lacunas e sobreposições finas criando o vértice que falta no lote vizinho; menu em largura igual; atualização sem erro.
+    <changelog>1.2.0 - Modo simples: as ferramentas de geração rodam direto do menu; modo avançado pelo botão direito no painel.
+• Modo simples (padrão): Logradouros, Quadras, Núcleo, Confrontantes e Todas as Geometrias geram direto com os valores padrão; Buffer's gera o buffer da linha clicada no mapa; só erros aparecem, na faixa do QGIS; as demais ferramentas escondem os Parâmetros avançados.
+• Modo avançado: botão direito no painel ▸ Modo avançado; as ferramentas abrem com os Parâmetros avançados visíveis; a escolha fica guardada.
+• Fechar do painel: só a cor do X muda sob o mouse.
+• Inspecionar e Ajustar: tabela CAMADA / VALOR / PROBLEMA com ícone de status (chave: CORRIGIR resolve; exclamação: correção manual; olho: alerta); alertas novos para segmento de 15 a 50 cm e polígono abaixo de 10 m²; segmento curto passa a ser até 15 cm; no mapa, erros em laranja, alertas em amarelo e a seleção em vermelho escuro, mais grossa; segmento curto marcado como linha; texto de informação mais curto; resumo abaixo da tabela.
+• Validação: abaixo de VALIDAR, a lista das camadas encontradas, das obrigatórias que faltam e das opcionais ausentes.
+• Nomear e Numerar: ATIVAR CLIQUE é o primeiro botão, do tamanho de SALVAR; o campo do Nomear vai para Parâmetros avançados e o "Iniciar em" do Numerar sai deles.
+• Adotar Simbologia: "Configurar estilos" vai para Parâmetros avançados.
+• Dividir Polígonos: botão próprio em Outros, sem página; o botão direito seleciona as feições a dividir (qualquer camada de polígonos), o clique esquerdo traça a linha e o duplo clique conclui; só o selecionado é cortado; Esc ou abrir outra ferramenta desliga. Converter passa para o grupo Outros.
+• Painel: modo avançado escolhido por ferramenta no menu do botão direito; botão com a ferramenta ligada no mapa fica pressionado, com a instrução na faixa do QGIS (Dividir Polígonos e Buffer's); o menu do botão direito tem título, ícone de cada ferramenta e linha entre os grupos, e fica aberto para marcar várias ferramentas; as perguntas e avisos das ferramentas levam o ícone do ShapeBuilder; fechar com a mesma distância do topo e da direita.
+• Inspecionar e Ajustar: no modo simples já abre validando; VALIDAR e CORRIGIR calculam em segundo plano, sem travar o QGIS; lista ordenada por status; olho no cabeçalho esconde os alertas; marcas no mapa mais finas (linhas finas com contorno, pontos redondos); segmento curto remove o vértice solto e mantém o que as feições vizinhas compartilham.
+• Campos gerados em caixa alta: NOME, QUADRA, LOTE (e AREA, PERIMETRO).
+• Modo simples: Validação valida direto e mostra o resultado numa janela enxuta (ícone e título azul, vermelho ou amarelo; números no padrão brasileiro; erros numa faixa vermelha recolhida); Nomear fica ligado e pede o nome da feição clicada; Área e Perímetro grava em todas as camadas de polígonos visíveis e avisa na faixa do QGIS. No modo avançado, os Parâmetros avançados aparecem recolhidos.
+• Inspecionar e Ajustar: um buraco que encosta na borda do lote em dois pontos (parede mais fina que 0,001 cm, sobra de sobreposição com o vizinho) vira entalhe no contorno; as correções não criam mais esse tipo de anel interior.
+• Painel: ícone e nome dos botões centralizados juntos, também em telas grandes; botão de ferramenta ligada só desmarca quando ela desliga de fato.
+• Esc desliga Dividir Polígonos, Buffer's, Nomear e os ATIVAR CLIQUE na hora, sem precisar clicar no mapa antes.
+• Dividir Polígonos: desligar com cortes não salvos pergunta Salvar, Descartar ou Cancelar; o botão direito torna ativa a camada da feição escolhida, para o Ctrl+Z desfazer nela; uma feição por vez; o corte fica pendente na camada até Salvar (Descartar desfaz); a feição vizinha da mesma camada ganha o vértice do corte na hora, e as das outras camadas (lote, Núcleo, Confrontante) quando a camada cortada é salva.
+• Validação: ícones nítidos na lista das camadas. Nomear: a lista aproxima o mapa na feição escolhida. Área e Perímetro: as duas tabelas com a mesma altura. Adotar Simbologia: no modo simples aplica direto. As camadas geradas entram no painel na ordem da simbologia. Validação: marcas no mapa no mesmo padrão do Inspecionar; no modo simples já abre validando quando as camadas obrigatórias estão no projeto. Área e Perímetro: a página não pisca mais depois de gravar. Converter: as camadas convertidas voltam ao painel na ordem da simbologia.
+1.1.1 - Inspecionar fecha lacunas e sobreposições finas criando o vértice que falta no lote vizinho; menu em largura igual; atualização sem erro.
 • Inspecionar e Ajustar: numa lacuna ou sobreposição fina, o vértice de um lote a até 15 cm da aresta do vizinho é criado no vizinho (parâmetro "Vértice em lacuna/sobreposição até"); se o vizinho já tem vértice perto, o vértice solto vai até ele; nós a menos de 0,001 cm viram o mesmo ponto; sobreposições assim passam a ser corrigidas no Corrigir (padrão).
 • Nós não coincidentes: só a mesma coordenada exata conta como o mesmo nó; vértices a nanômetros um do outro passam a ser apontados e unificados.
 • Precisão: Inspecionar e Validação comparam os dados em precisão total, sem arredondar para uma grade; a rua provisória passa pelo canto de lote que fica a até 15 cm do seu contorno, sem deixar cunha fina.
@@ -64,6 +82,6 @@
 1.0.0 - Lançamento inicial.</changelog>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
-    <update_date>2026-09-29</update_date>
+    <update_date>2026-09-30</update_date>
   </pyqgis_plugin>
 </plugins>
