@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugins>
+  <pyqgis_plugin name="SIRGEO SmartTrace" version="1.0.0">
+    <description>Vetorização assistida por IA para regularização fundiária: lotes e edificações desenhados a partir da ortofoto, desmembramento e edição de polígonos.</description>
+    <about>SIRGEO SmartTrace é o módulo de vetorização assistida por inteligência artificial da suíte SIRGEO. Lê a ortofoto do projeto de regularização fundiária (REURB) e desenha os lotes e as edificações do Núcleo, em camadas separadas para a conferência do engenheiro, já conformes às regras do Inspecionar do SIRGEO ShapeBuilder.
+
+&lt;b&gt;Vetorização por IA&lt;/b&gt;
+• Imóveis: as quadras divididas em lotes, com a conformidade de cada lote (Alta, Média, Baixa).
+• Edificações: todas as construções visíveis, esquadrejadas e recortadas pelos lotes, em segundo plano.
+• Edificação por Clique: uma construção por clique sobre o telhado; o botão direito apaga.
+• Desmembramento: uma área dividida em lotes pelo padrão dos lotes vizinhos, automático ou guiado.
+
+&lt;b&gt;Ferramentas de Edição&lt;/b&gt;
+• Dividir Polígonos e Unir Polígonos, com os vizinhos ajustados nos vértices em comum.
+
+&lt;b&gt;Modelo&lt;/b&gt;
+• O modelo de IA é baixado e instalado automaticamente, e atualizado quando sai uma versão nova.
+
+&lt;b&gt;Padrões&lt;/b&gt;
+• Camadas reconhecidas pelo nome (Núcleo, Lotes), sem exigir acento, caixa ou plural; CRS projetado.
+• Processamento local, sem envio de imagens para fora da máquina.
+• Guia de uso completo no botão de ajuda (?) do painel.
+
+&lt;b&gt;Licença&lt;/b&gt;
+• Licença por máquina, validada on-line a cada abertura do QGIS. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
+    <version>1.0.0</version>
+    <qgis_minimum_version>3.40</qgis_minimum_version>
+    <qgis_maximum_version>3.99</qgis_maximum_version>
+    <author_name>SIRGEO</author_name>
+    <file_name>sirgeo_smarttrace.zip</file_name>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/smarttrace-v1.0.0/sirgeo_smarttrace-1.0.0.zip</download_url>
+    <tags>cadastro,regularizacao fundiaria,reurb,lotes,edificacoes,desmembramento,ortofoto,inteligencia artificial,vetorizacao,sirgas</tags>
+    <changelog>1.0.0 - Primeira versão: Imóveis, Edificações, Edificação por Clique, Desmembramento, Dividir e Unir Polígonos; modelo de IA baixado automaticamente.</changelog>
+    <experimental>False</experimental>
+    <deprecated>False</deprecated>
+    <update_date>2026-10-02</update_date>
+  </pyqgis_plugin>
+</plugins>
