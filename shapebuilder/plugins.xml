@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.2.2">
+  <pyqgis_plugin name="SIRGEO ShapeBuilder" version="1.2.3">
     <description>Engenharia cadastral para regularização fundiária: construção, correção, medição e validação das camadas do projeto com geometria precisa e determinística.</description>
     <about>SIRGEO ShapeBuilder é o módulo de engenharia cadastral da suíte SIRGEO. Reúne, num único painel, as ferramentas para levar um projeto de regularização fundiária (REURB) do desenho dos lotes até a entrega certificada, com cálculos geométricos precisos, determinísticos e auditáveis.
 
@@ -34,14 +34,16 @@
 
 &lt;b&gt;Licença&lt;/b&gt;
 • Licença por máquina, validada on-line. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <qgis_minimum_version>3.40</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
     <author_name>SIRGEO</author_name>
     <file_name>sirgeo_shapebuilder.zip</file_name>
-    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.2.2/sirgeo_shapebuilder-1.2.2.zip</download_url>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/shapebuilder-v1.2.3/sirgeo_shapebuilder-1.2.3.zip</download_url>
     <tags>cadastro,regularizacao fundiaria,reurb,lotes,quadras,topologia,geometria,validacao,sirgas</tags>
-    <changelog>1.2.2 - Lacunas fechadas por lotes que só se tocam em pontos, Quadras por contato, atalho e zeros do Numerar, nomes de camada mais flexíveis.
+    <changelog>1.2.3 - Licença reforçada: novo ID da máquina.
+• O ID da máquina mudou: envie à SIRGEO o novo ID mostrado no painel para registrar a licença de novo.
+1.2.2 - Lacunas fechadas por lotes que só se tocam em pontos, Quadras por contato, atalho e zeros do Numerar, nomes de camada mais flexíveis.
 • Inspecionar e Ajustar: aponta a lacuna fechada por lotes que só se tocam em pontos (a que alcança a borda da quadra num canto e a fenda que atravessa a quadra, fechada nas duas pontas), antes invisível.
 • Quadras: todos os lotes em contato formam uma quadra só; o campo de quadra dos lotes não separa mais.
 • Nomear: a feição clicada fica toda destacada, contorno e preenchimento, enquanto o nome é pedido.
