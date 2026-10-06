@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="SIRGEO SmartTrace" version="1.0.3">
+  <pyqgis_plugin name="SIRGEO SmartTrace" version="1.0.4">
     <description>Vetorização assistida por IA para regularização fundiária: lotes e edificações desenhados a partir da ortofoto, desmembramento e edição de polígonos.</description>
     <about>SIRGEO SmartTrace é o módulo de vetorização assistida por inteligência artificial da suíte SIRGEO. Lê a ortofoto do projeto de regularização fundiária (REURB) e desenha os lotes e as edificações do Núcleo, em camadas separadas para a conferência do engenheiro, já conformes às regras do Inspecionar do SIRGEO ShapeBuilder.
 
@@ -20,21 +20,16 @@
 &lt;b&gt;Padrões&lt;/b&gt;
 • Camadas reconhecidas por qualquer palavra do nome ("Centro - lotes", "Construções", "Núcleo Provisório"), sem exigir acento, caixa ou plural; CRS projetado.
 • Processamento local, sem envio de imagens para fora da máquina.
-• Guia de uso completo no botão de ajuda (?) do painel.
-
-&lt;b&gt;Licença&lt;/b&gt;
-• Licença por máquina, validada on-line a cada abertura do QGIS. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
-    <version>1.0.3</version>
+• Guia de uso completo no botão de ajuda (?) do painel.</about>
+    <version>1.0.4</version>
     <qgis_minimum_version>3.40</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
     <author_name>SIRGEO</author_name>
     <file_name>sirgeo_smarttrace.zip</file_name>
-    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/smarttrace-v1.0.3/sirgeo_smarttrace-1.0.3.zip</download_url>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/smarttrace-v1.0.4/sirgeo_smarttrace-1.0.4.zip</download_url>
     <tags>cadastro,regularizacao fundiaria,reurb,lotes,edificacoes,desmembramento,ortofoto,inteligencia artificial,vetorizacao,sirgas</tags>
-    <changelog>1.0.3 - Nova logo do SmartTrace.
-1.0.2 - Licença reforçada: novo ID da máquina e modelo de IA liberado on-line a cada abertura do QGIS.
-• O ID da máquina mudou: envie à SIRGEO o novo ID mostrado no painel para registrar a licença de novo.
-• O modelo de IA é liberado a cada abertura do QGIS, com a licença válida e a internet conectada; um novo pacote do modelo é baixado automaticamente.
+    <changelog>1.0.4 - Ajustes no guia de uso.
+1.0.3 - Nova logo do SmartTrace.
 1.0.1 - Imóveis e Edificações perguntam a área a vetorizar; camadas reconhecidas por qualquer palavra do nome.
 • Imóveis e Edificações: a janela da área tem três botões, e um clique já começa: a camada do projeto (os lotes ou o Núcleo, achados pelo nome), desenhar no mapa ou a ortofoto inteira.
 • Lotes, Edificações e Núcleo reconhecidos por qualquer palavra do nome da camada ("Lotes - lotes", "Centro - lotes", "Construções").
