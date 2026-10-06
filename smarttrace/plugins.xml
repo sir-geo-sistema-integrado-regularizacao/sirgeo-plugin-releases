@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="SIRGEO SmartTrace" version="1.0.2">
+  <pyqgis_plugin name="SIRGEO SmartTrace" version="1.0.3">
     <description>Vetorização assistida por IA para regularização fundiária: lotes e edificações desenhados a partir da ortofoto, desmembramento e edição de polígonos.</description>
     <about>SIRGEO SmartTrace é o módulo de vetorização assistida por inteligência artificial da suíte SIRGEO. Lê a ortofoto do projeto de regularização fundiária (REURB) e desenha os lotes e as edificações do Núcleo, em camadas separadas para a conferência do engenheiro, já conformes às regras do Inspecionar do SIRGEO ShapeBuilder.
 
@@ -24,14 +24,15 @@
 
 &lt;b&gt;Licença&lt;/b&gt;
 • Licença por máquina, validada on-line a cada abertura do QGIS. Solicite o registro à SIRGEO informando o ID da máquina mostrado no painel.</about>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <qgis_minimum_version>3.40</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
     <author_name>SIRGEO</author_name>
     <file_name>sirgeo_smarttrace.zip</file_name>
-    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/smarttrace-v1.0.2/sirgeo_smarttrace-1.0.2.zip</download_url>
+    <download_url>https://github.com/sir-geo-sistema-integrado-regularizacao/sirgeo-plugin-releases/releases/download/smarttrace-v1.0.3/sirgeo_smarttrace-1.0.3.zip</download_url>
     <tags>cadastro,regularizacao fundiaria,reurb,lotes,edificacoes,desmembramento,ortofoto,inteligencia artificial,vetorizacao,sirgas</tags>
-    <changelog>1.0.2 - Licença reforçada: novo ID da máquina e modelo de IA liberado on-line a cada abertura do QGIS.
+    <changelog>1.0.3 - Nova logo do SmartTrace.
+1.0.2 - Licença reforçada: novo ID da máquina e modelo de IA liberado on-line a cada abertura do QGIS.
 • O ID da máquina mudou: envie à SIRGEO o novo ID mostrado no painel para registrar a licença de novo.
 • O modelo de IA é liberado a cada abertura do QGIS, com a licença válida e a internet conectada; um novo pacote do modelo é baixado automaticamente.
 1.0.1 - Imóveis e Edificações perguntam a área a vetorizar; camadas reconhecidas por qualquer palavra do nome.
@@ -40,6 +41,6 @@
 1.0.0 - Primeira versão: Imóveis, Edificações, Edificação por Clique, Desmembramento, Dividir e Unir Polígonos; modelo de IA baixado automaticamente.</changelog>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
-    <update_date>2026-10-05</update_date>
+    <update_date>2026-10-06</update_date>
   </pyqgis_plugin>
 </plugins>
